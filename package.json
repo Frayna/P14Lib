@@ -1,0 +1,40 @@
+{
+  "name": "p14lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -r dist",
+    "build": "pnpm run build:esm && pnpm run build:scss && node postbuild.js dist .ts .js && pnpm run build:rmComments",
+    "build:esm": "tsc ",
+    "build:scss": "node-sass src/styles.scss dist/styles.css",
+    "build:rmComments": "uglifyjs dist/index.js -o dist/index.js && uglifyjs dist/components/modal.js -o dist/components/modal.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "css-loader": "^6.7.3",
+    "esbuild": "^0.17.5",
+    "esbuild-sass-plugin": "^2.4.5",
+    "node-sass": "^8.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "typescript": "^4.9.4",
+    "uglify-js": "^3.17.4"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  }
+}
