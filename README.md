@@ -1,7 +1,5 @@
 # React modal component
 
-[![npm version](https://badge.fury.io/js/p14lib.svg)](https://badge.fury.io/js/p14lib)
-
 A accessible modal dialog component for React.JS
 
 ## Installation
