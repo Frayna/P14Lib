@@ -17,7 +17,7 @@ npm install p14lib
 import React from 'react';
 import { Modal } from 'p14lib';
 
-export default function index() {
+export default function Index() {
 	const [opened, setOpened] = useState(false);
 
 	return (
