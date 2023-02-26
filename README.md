@@ -2,6 +2,9 @@
 
 A accessible modal dialog component for React.JS
 
+## React minimum version
+- [React](https://reactjs.org/docs/getting-started.html) (>= 18.2)
+
 ## Installation
 
 ```sh
